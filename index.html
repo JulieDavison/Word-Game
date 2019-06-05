@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    
+    <!-- Display the following on the page: -->
+    <div class="container">
+        <h1 id=displayText>Game Name!</h1>
+
+        <!-- Press any key to get started! -->
+        <div>
+            Press any key to get started. <span id="currentGuess">'Make a guess!'</span>
+        </div>
+        <div>
+            Enter Letter:
+            <input id="guess" type="text" maxlength=1>
+        </div>
+        <!-- <button onclick="submitAnswer()"> -->
+            <!-- Check Guess -->
+        <!-- </button> -->
+
+        <!-- Number of times the player has guessed the right word. -->
+        <h4>Wins</h4>
+        <div id="totalWins"></div>
+
+        <!-- Displays the unfolding word, display it like this when the game starts: _ _ _ _ _ _ _., reveiling the word as the player guesses the letters.-->
+        <h4>Current Word</h4>
+        <div id="currentWord"></div>
+
+        <!-- Number of guesses remaining -->
+        <h4>Guesses Remaining</h4>
+        <div id="remainingGuesses"></div>
+
+        <!-- Letters that have been guessed, displayed like L Z Y H-->
+        <h4>Letters Guessed</h4>
+        <div id="guessedLetters"></div>
+
+    </div>
+
+
+    <!-- After the user wins/loses the game should automatically choose another word and make the user play it. -->
 
 
 
-<!-- Use key events to listen for the letters that your players will type. -->
-
-
-<!-- Display the following on the page: -->
-
-
-<!-- Press any key to get started! -->
-
-
-<!-- Wins: (# of times user guessed the word correctly). -->
-
-
-<!-- If the word is madonna, display it like this when the game starts: _ _ _ _ _ _ _. -->
-
-
-<!-- As the user guesses the correct letters, reveal them: m a d o _ _ a. -->
-
-
-
-
-<!-- Number of Guesses Remaining: (# of guesses remaining for the user). -->
-
-
-<!-- Letters Already Guessed: (Letters the user has guessed, displayed like L Z Y H). -->
-
-
-<!-- After the user wins/loses the game should automatically choose another word and make the user play it. -->
-
+    <!-- Scripts -->
+    <script src="game.js"></script>
 </body>
+
 </html>
