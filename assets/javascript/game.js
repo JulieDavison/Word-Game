@@ -8,11 +8,12 @@ var possibleWords = ["list", "words", "here"];
 //Empty variables
 var guessingWord = [];
 var guessedLetters = [];
-// var currentStatus = guessingWord.slice();
+var currentStatus = guessingWord.slice();
 var wordToMatch
 var numGuess
 var wins = 0
 
+// resetGame(); need function to reset game.
 
 
 //Shows word with underscores instead of letters.
@@ -50,7 +51,7 @@ function checkForLetter(){
 
 
 
-
+//Need function to update display.
 // function updateDisplay() {
     // document.getElementById("currentWord").innerText = guessingWord.join("");
 // }
