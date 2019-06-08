@@ -2,33 +2,33 @@
 
 // Variables
 
-var possibleWords = ["list", "words", "here", "please"];
+var possibleWords = ["Earth", "galaxy", "asteroid", "comet", "constellations", "Neptune", "nebula", "Saturn", "Jupiter"];
 
-const maxGuess = 10
-var pauseGame = false
+// const maxGuess = 10
+// var pauseGame = false
 
 var guessingWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
 var guessedLetters = [];
 var currentStatus = [];
-var wordToMatch
-var numGuess
-var wins = 0
+// var wordToMatch
+// var numGuess
+// var wins = 0
 
 //reset game.
 // resetGame();
 
 //Shows word with underscores instead of letters.
 for (i = 0; i < guessingWord.length; i++) {
-    currentStatus[i] = "_"
+    currentStatus[i] = "_";
 }
 console.log(guessingWord);
 // document.getElementById("currentWord").innerHTML = guessingWord.join("");
 
-console.log(currentStatus.join(' '));
-document.getElementById("currentWord").innerHTML = currentStatus.join("");
+console.log(currentStatus.join(" "));
+// document.getElementById("currentWord").innerHTML = currentStatus.join("");
 
 var currentWordEl = document.getElementById('currentWord');
-currentWordEl.innerText = currentStatus.join(' ');
+currentWordEl.innerText = currentStatus.join('');
 
 
 var isAlpha = function (ch) {
@@ -44,17 +44,19 @@ document.onkeypress = function (e) {
         
         if (letterInWord === true) {
                 // letterInWord.push(e.key);
-                document.getElementById("currentWord").innerHTML = currentStatus.join("");
+                
               
             // document.getElementById("currentWord").innerText = letterInWord.join(" ");
             //Inside this b;lock we know the gues was in the word
             //we need to update teh underscores on screen
-            // console.log(currentStatus)
+            console.log(currentStatus)
+            document.getElementById("currentWord").innerHTML = currentStatus.join(""+" ");
+            console.log(currentStatus.join(""+" "))
         }
         else {
             //Guess was not in the word
             //add the letter to letters guessed array (push method)
-            console.log(currentStatus)
+            // console.log(currentStatus)
 
         }
 
