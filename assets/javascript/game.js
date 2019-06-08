@@ -4,6 +4,9 @@
 
 var possibleWords = ["list", "words", "here", "please"];
 
+const maxGuess = 10
+var pauseGame = false
+
 var guessingWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
 var guessedLetters = [];
 var currentStatus = [];
@@ -19,9 +22,10 @@ for (i = 0; i < guessingWord.length; i++) {
     currentStatus[i] = "_"
 }
 console.log(guessingWord);
-
+// document.getElementById("currentWord").innerHTML = guessingWord.join("");
 
 console.log(currentStatus.join(' '));
+document.getElementById("currentWord").innerHTML = currentStatus.join("");
 
 var currentWordEl = document.getElementById('currentWord');
 currentWordEl.innerText = currentStatus.join(' ');
@@ -31,17 +35,21 @@ var isAlpha = function (ch) {
     return /^[A-Z]$/i.test(ch);
 }
 
-//onkeypress event goes here.  "KEY EVENT"
-// when a key is pressed start the game if the key is an uppercase alphabet character.
+// A key is pressed start the game if the key is an uppercase alphabet character.
 document.onkeypress = function (e) {
     console.log(isAlpha(e.key));
     if (isAlpha(e.key)) {
         var letterInWord = checkForLetter(e.key);
         console.log(typeof letterInWord);
-        if (letterInWord) {
+        
+        if (letterInWord === true) {
+                // letterInWord.push(e.key);
+                document.getElementById("currentWord").innerHTML = currentStatus.join("");
+              
+            // document.getElementById("currentWord").innerText = letterInWord.join(" ");
             //Inside this b;lock we know the gues was in the word
             //we need to update teh underscores on screen
-            console.log(currentStatus)
+            // console.log(currentStatus)
         }
         else {
             //Guess was not in the word
@@ -111,7 +119,7 @@ function checkForLetter(keyPressed) {
 //Need function to update display.
 function updateDisplay() {
     // document.getElementById("totalWins").innerText = wins;
-    document.getElementById("currentWord").innerText = guessingWord;
+    // document.getElementById("currentWord").innerText = guessingWord;
     // document.getElementById("remainingGuesses").innerText = numGuess;
     // document.getElementById("guessedLetters").innerText = guessedLetters.join(" ");
 }
