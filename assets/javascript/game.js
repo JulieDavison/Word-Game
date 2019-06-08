@@ -11,7 +11,7 @@ var guessingWord = possibleWords[Math.floor(Math.random() * possibleWords.length
 var guessedLetters = [];
 var currentStatus = [];
 // var wordToMatch
-// var numGuess
+var numGuess
 var wins = 0
 
 //reset game.
@@ -43,26 +43,29 @@ document.onkeypress = function (e) {
     if (isAlpha(e.key)) {
         var letterInWord = checkForLetter(e.key);
         console.log(typeof letterInWord);
-        
+
         if (letterInWord === true) {
-                // letterInWord.push(e.key);
-                
-              
+            // letterInWord.push(e.key);
+
+
             // document.getElementById("currentWord").innerText = letterInWord.join(" ");
             //Inside this b;lock we know the gues was in the word
             //we need to update teh underscores on screen
             console.log(currentStatus)
-            document.getElementById("currentWord").innerHTML = currentStatus.join(""+" ");
-            
+            document.getElementById("currentWord").innerHTML = currentStatus.join("" + " ");
+
         }
         else {
             //Guess was not in the word
             //add the letter to letters guessed array (push method)
             maxGuess--;
             console.log(maxGuess);
+            document.getElementById("remainingGuesses").innerText = maxGuess;
+
+
             guessedLetters.push(keyValue);
             console.log(guessedLetters);
-            
+            document.getElementById("guessedLetters").innerText = guessedLetters.join(" ");
         }
 
         //Is teh game completed
@@ -70,6 +73,7 @@ document.onkeypress = function (e) {
             //User has completed the word
             alert('you win');
             wins++;
+            document.getElementById("totalWins").innerText = wins;
             console.log(wins);
         }
     }
