@@ -1,0 +1,28 @@
+body {
+    background-image: url(https://spacenews.com/wp-content/uploads/2018/05/24359364107_152b0152ff_k-879x485.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: lightsteelblue;
+}
+h4 {
+    font-size: 25px;
+}
+
+#totalWins {
+    font-size: 35px;
+}
+#currentWord {
+    font-size: 45px;
+}
+#remainingGuesses {
+    font-size: 35px;
+}
+#guessedLetters {
+    font-size: 35px;
+}
+.container {
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
