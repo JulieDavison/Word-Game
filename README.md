@@ -5,4 +5,3 @@ Link to the
 
 Press any letter to begin the game.  
 
-(The last letter of the word does not diplay.)
