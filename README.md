@@ -1,7 +1,7 @@
 # Word Game:  SPACE Edition
 A simple version of a hangman style game.
 
-Link  
+Link to the  
 [Space Word Game](https://juliedavison.github.io/Word-Game/)
 
 ### Instructions:
